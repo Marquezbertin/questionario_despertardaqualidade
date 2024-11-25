@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Questionário: Qualidade de Software</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>O Despertar da Qualidade de Software</h1>
+    <p>Teste seus conhecimentos sobre os Jedis da Qualidade!</p>
+  </header>
+  <main>
+    <section id="quiz">
+      <fieldset class="question">
+        <legend>1. A qualidade deve ser incorporada desde o início do projeto.</legend>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 1">Certo</button>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 1">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>2. Revisões de código são dispensáveis para garantir a qualidade.</legend>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 2">Certo</button>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 2">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>3. Bugs podem ser totalmente eliminados durante o desenvolvimento.</legend>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 3">Certo</button>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 3">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>4. Uma liderança inspiradora ajuda a promover a qualidade no desenvolvimento.</legend>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 4">Certo</button>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 4">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>5. Testes unitários garantem a interação correta entre diferentes partes do sistema.</legend>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 5">Certo</button>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 5">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>6. A adoção de novas tecnologias pode melhorar a qualidade do software.</legend>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 6">Certo</button>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 6">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>7. A segurança do software deve ser considerada apenas na fase final de desenvolvimento.</legend>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 7">Certo</button>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 7">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>8. O DevOps promove colaboração entre desenvolvimento e operações.</legend>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 8">Certo</button>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 8">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>9. Testes exploratórios ajudam a identificar problemas inesperados.</legend>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 9">Certo</button>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 9">Errado</button>
+      </fieldset>
+
+      <fieldset class="question">
+        <legend>10. A melhoria contínua é desnecessária quando a equipe alcança excelência.</legend>
+        <button onclick="checkAnswer(this, false)" aria-label="Resposta errada para a questão 10">Certo</button>
+        <button onclick="checkAnswer(this, true)" aria-label="Resposta certa para a questão 10">Errado</button>
+      </fieldset>
+    </section>
+
+    <!-- Modal de Resultado -->
+    <div id="resultModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Você acertou <span id="modalScore"></span> de 10 questões!</h2>
+        <p>Gostaria de refazer o questionário ou voltar ao site?</p>
+        <button id="retryBtn">Refazer Questionário</button>
+        <button id="siteBtn">Voltar ao site</button>
+      </div>
+    </div>
+
+    <section id="results" class="hidden">
+      <h2>Resultado</h2>
+      <p id="score"></p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; Bruno Bertin 2024 - Inspirado em "O Despertar para a Qualidade de Software"</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
